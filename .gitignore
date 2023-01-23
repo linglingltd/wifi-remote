@@ -50,4 +50,5 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
-*/credentials.h
+# Custom
+esp8266_remote/credentials.h
