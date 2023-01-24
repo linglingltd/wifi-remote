@@ -43,7 +43,6 @@ Das verbaute [WLAN-Modul WB3S](https://developer.tuya.com/en/docs/iot/wb3s-modul
 Das Pinout dieses Moduls ist kompatibel mit den gängigen ESP-Modulen wie ESP-08 oder ESP-12, jedoch werden die Pull-Widerstände auf den GPIO-Leitungen 0, 2 und 15 nicht benötigt. Entsprechend habe ich das Modul durch einen ESP-12 ersetzt und die Widerstände hinzugefügt.
 
 ![Neues WLAN-Modul](Modified-WiFi-Module.jpg "ESP12 mit Pull-Widerständen in der Fernbedienung")
-@@Bild innenleben
 
 Zum Austauschen des WLAN-Moduls habe ich meine Heißluftstation eingesetzt. Die Kunststoff-Folie mit den Metall-Domen der Taster ist nicht Hitze-Resistent und muss vorsichtig abgezogen werden, bevor die Platine erhitzt wird.
 Nach dem Umbau kann die Folie wieder aufgeklebt werden. Hierbei ist natürlich darauf zu achten, dass kein Dreck unter die Metall-Dome kommt, da sonst kein sauberer Kontakt bei Tastendruck mehr gegeben ist.
