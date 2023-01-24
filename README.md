@@ -10,7 +10,7 @@ Wird eine Taste gedrückt, aktiviert der Mikrocontroller das WLAN-Modul und send
 Damit später das WLAN-Modul mit der eigenen Firmware richtig mit dem Mikrocontroller spricht, mussten erst sämtliche Befehle ausgelesen werden. Hierfür wurden zwei USB-Seriell-Adapter eingesetzt, die jeweils mit ihrem RX-Anschluss auf eine der Datenleitungen verbunden wurden.
 
 Mit geöffnetem Terminal für beide Leitungen wurden dann alle Tasten gedrückt und die Befehle ausgelesen.
-Das Ergebnis steht in der nachfolgenden Tabelle:
+Das Ergebnis (in HEX) steht in der nachfolgenden Tabelle:
 
 Key					| Data from MCU									| Response from WiFi-Module
 --------------------|-----------------------------------------------|------------------------
@@ -22,16 +22,16 @@ A					| 55 AA 01 06 00 01 00 07						| 55 AA 01 06 00 01 01 08
 B					| 55 AA 01 06 00 01 01 08						| 55 AA 01 06 00 01 01 08
 Slider left (down)	| 55 AA 01 02 00 06 01 25 01 00 14 00 43		| 55 AA 01 02 00 00 02
 Slider left (up)	| 55 AA 01 02 00 06 01 25 02 00 00 00 30		| 55 AA 01 02 00 00 02
-Slider right(down)	| 55 AA 01 02 00 06 01 25 00 00 14 00 42		| 55 AA 01 02 00 00 02
-Slider right(up)	| 55 AA 01 02 00 06 01 25 02 00 00 00 30		| 55 AA 01 02 00 00 02
+Slider right (down)	| 55 AA 01 02 00 06 01 25 00 00 14 00 42		| 55 AA 01 02 00 00 02
+Slider right (up)	| 55 AA 01 02 00 06 01 25 02 00 00 00 30		| 55 AA 01 02 00 00 02
 Square left	(down)	| 55 AA 01 02 00 06 01 27 01 00 14 00 45		| 55 AA 01 02 00 00 02
 Square left (up)	| 55 AA 01 02 00 06 01 27 02 00 00 00 32		| 55 AA 01 02 00 00 02
-Square right(down)	| 55 AA 01 02 00 06 01 27 00 00 14 00 44		| 55 AA 01 02 00 00 02
-Square right			(up)	| 55 AA 01 02 00 06 01 27 02 00 00 00 32		| 55 AA 01 02 00 00 02
+Square right (down)	| 55 AA 01 02 00 06 01 27 00 00 14 00 44		| 55 AA 01 02 00 00 02
+Square right (up)	| 55 AA 01 02 00 06 01 27 02 00 00 00 32		| 55 AA 01 02 00 00 02
 Square top	(down)	| 55 AA 01 02 00 06 01 2A 00 14 00 00 47		| 55 AA 01 02 00 00 02
 Square top	(up)	| 55 AA 01 02 00 06 01 2A 02 00 00 00 35		| 55 AA 01 02 00 00 02
-Square bottom(down)	| 55 AA 01 02 00 06 01 2A 01 14 00 00 48		| 55 AA 01 02 00 00 02
-Square bottom(up)	| 55 AA 01 02 00 06 01 2A 02 00 00 00 35		| 55 AA 01 02 00 00 02
+Square bottom (down)	| 55 AA 01 02 00 06 01 2A 01 14 00 00 48		| 55 AA 01 02 00 00 02
+Square bottom (up)	| 55 AA 01 02 00 06 01 2A 02 00 00 00 35		| 55 AA 01 02 00 00 02
 On					| 55 AA 01 02 00 03 FF 01 01 06					| 55 AA 01 02 00 00 02
 Off					| 55 AA 01 02 00 03 FF 01 00 05					| 55 AA 01 02 00 00 02
 
@@ -39,7 +39,7 @@ Um es einfach zu halten habe ich nicht versucht, das Protokoll weiter nachzuvoll
 
 ## Hardware-Modifikation
 
-Das verbaute [https://developer.tuya.com/en/docs/iot/wb3s-module-datasheet?id=K9dx20n6hz5n4](WLAN-Modul) WB3S stammt von Tuya und basiert auf dem BK7231T. Da ich mit diesem Chip nicht sehr vertraut bin, habe ich entschieden eine alternative zu suchen.
+Das verbaute [WLAN-Modul](https://developer.tuya.com/en/docs/iot/wb3s-module-datasheet?id=K9dx20n6hz5n4) WB3S stammt von Tuya und basiert auf dem BK7231T. Da ich mit diesem Chip nicht sehr vertraut bin, habe ich entschieden eine alternative zu suchen.
 Das Pinout dieses Moduls ist kompatibel mit den gängigen ESP-Modulen wie ESP-08 oder ESP-12, jedoch werden die Pull-Widerstände auf den GPIO-Leitungen 0, 2 und 15 nicht benötigt. Entsprechend habe ich das Modul durch einen ESP-12 ersetzt und die Wiederstände hinzugefügt.
 
 @@Bild innenleben
@@ -60,4 +60,4 @@ Damit das WLAN-Modul dauerhaft aktiv bleibt für das Update muss hierzu einfach 
 
 ## Downloads & Links
 
-[https://github.com/Techspiring/wifi-remote](Repository des Projekts auf github)
+[Repository des Projekts auf github](https://github.com/Techspiring/wifi-remote)
