@@ -1,3 +1,7 @@
+## Device under Test
+
+![LEDVANCE Smart+ Remote Control](Remote.jpg "LEDVANCE Smart+ Remote Control")
+
 ## Reverse-Engineering: Aufbau und Funktion
 
 Die Fernbedienung ist nur zusammengeclipst und lässt sich mit etwas vorsichtigem Hebeln einfach außeinanderbauen. Die Konstruktion ist solide und lässt sich auch mehrfach ohne Zerstörung außeinanderbauen.
