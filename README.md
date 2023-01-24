@@ -1,7 +1,7 @@
 ## Reverse-Engineering: Aufbau und Funktion
 
 Die Fernbedienung ist nur zusammengeclipst und lässt sich mit etwas vorsichtigem Hebeln einfach außeinanderbauen. Die Konstruktion ist solide und lässt sich auch mehrfach ohne Zerstörung außeinanderbauen.
-Darin befindet sich eine einfache Platine mit einem Mikrocontroller zur Auswertung der Tastendrücke sowie einem @@@(welcher ESP?).
+Darin befindet sich eine einfache Platine mit einem ARM Cortec M0+ Mikrocontroller HC32L110 zur Auswertung der Tastendrücke sowie einem WB3S.
 
 Wird eine Taste gedrückt, aktiviert der Mikrocontroller das WLAN-Modul und sendet einen Schwall an Daten auf UART mit 9600 Baud. Das WLAN-Modul muss sich dann mit dem WLAN-Netzwerk verbinden, die Daten entsprechend absenden und antwortet dann auf UART mit entsprechenden Nachrichten zur Bestätigung. Kurz darauf @@@Zeit wird dann das WLAN-Modul wieder abgeschaltet.
 
@@ -39,7 +39,7 @@ Um es einfach zu halten habe ich nicht versucht, das Protokoll weiter nachzuvoll
 
 ## Hardware-Modifikation
 
-Das verbaute [WLAN-Modul](https://developer.tuya.com/en/docs/iot/wb3s-module-datasheet?id=K9dx20n6hz5n4) WB3S stammt von Tuya und basiert auf dem BK7231T. Da ich mit diesem Chip nicht sehr vertraut bin, habe ich entschieden eine alternative zu suchen.
+Das verbaute [WLAN-Modul WB3S](https://developer.tuya.com/en/docs/iot/wb3s-module-datasheet?id=K9dx20n6hz5n4) stammt von Tuya und basiert auf dem BK7231T. Da ich mit diesem Chip nicht sehr vertraut bin, habe ich entschieden eine alternative zu suchen.
 Das Pinout dieses Moduls ist kompatibel mit den gängigen ESP-Modulen wie ESP-08 oder ESP-12, jedoch werden die Pull-Widerstände auf den GPIO-Leitungen 0, 2 und 15 nicht benötigt. Entsprechend habe ich das Modul durch einen ESP-12 ersetzt und die Wiederstände hinzugefügt.
 
 @@Bild innenleben
