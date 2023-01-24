@@ -1,7 +1,7 @@
 ## Reverse-Engineering: Aufbau und Funktion
 
 Die Fernbedienung ist nur zusammengeclipst und lässt sich mit etwas vorsichtigem Hebeln einfach außeinanderbauen. Die Konstruktion ist solide und lässt sich auch mehrfach ohne Zerstörung außeinanderbauen.
-Darin befindet sich eine einfache Platine mit einem ARM Cortec M0+ Mikrocontroller HC32L110 zur Auswertung der Tastendrücke sowie einem WB3S.
+Darin befindet sich eine einfache Platine mit einem ARM Cortex M0+ Mikrocontroller HC32L110 von HDSC zur Auswertung der Tastendrücke sowie einem WLAN-Modil WB3S.
 
 Wird eine Taste gedrückt, aktiviert der Mikrocontroller das WLAN-Modul und sendet einen Schwall an Daten auf UART mit 9600 Baud. Das WLAN-Modul muss sich dann mit dem WLAN-Netzwerk verbinden, die Daten entsprechend absenden und antwortet dann auf UART mit entsprechenden Nachrichten zur Bestätigung. Kurz darauf @@@Zeit wird dann das WLAN-Modul wieder abgeschaltet.
 
